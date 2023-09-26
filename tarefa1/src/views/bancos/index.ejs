@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Tarefa 01</title>
+        <link
+            href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <div class="container">
+            <br /><br /><br />
+            <h2 class="text-center">Bancos</h2>
+            <br />
+            <% if (bancos.length> 0) { %>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th>COMPE</th>
+                                <th>ShortName</th>
+                                <th>Document</th>
+                                <th>Type</th>
+                                <th>Url</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(var i=0; i < bancos.length; i++) {%>
+                            <tr>
+                                <td><%= bancos[i].COMPE %></td>
+                                <td><%= bancos[i].ShortName %></td>
+                                <td><%= bancos[i].Document %></td>
+                                <td><%= bancos[i].Type %></td>
+                                <td><%= bancos[i].Url %></td>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </body>
+</html>
