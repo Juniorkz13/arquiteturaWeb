@@ -2,7 +2,6 @@ import dotenv from 'dotenv'
 import passport from 'passport'
 import express from 'express'
 import session from 'express-session'
-import googleAuth from './passport.js'
 
 dotenv.config()
 
